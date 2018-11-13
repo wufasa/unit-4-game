@@ -13,39 +13,43 @@ var pokemon = {
         hp: 20,
         attack: 30,
         defense: 20,
+        id: charmander,
     },
     bulbasaur:{
         hp: 110,
         attack: 30,
         defense: 20,
+        id: bulbasaur,
     },
     squirtle:{
         hp: 220,
         attack: 30,
         defense: 20,
+        id: squirtle,
     },
     pikachu:{
         hp:420,
         attack:430,
         defense:420,
+        id: pikachu,
     }
 }
 var player = [];
 var enemy = [];
+var baseAtk = 0;
 
-function reset(){
-    
+    $(".btn-attack").hide();
+
+function resetPage(){
+    location.reload(true);
 }   
-//set page
-function set(){
-    
-}
     
     function setPlayer(pick){ 
         $("#text-header").text("Choose your enemy");
         $(".view").css("background-image", "url(assets/images/pokemon-gym-background-9.png)");
 //        $(pick).hide();
         $("#player").html(pick)
+        baseAtk = player.attack;
         $("#p-hp").text("HP: " + player.hp);
         $("#p-attack").text("Attack: " + player.attack);
         $("#p-defense").text("Defense: " + player.defense);
@@ -59,6 +63,12 @@ function set(){
         $("#e-hp").append("HP: " + enemy.hp);
         $("#e-attack").append("Attack: " + enemy.attack);
         $("#e-defense").append("Defense: " + enemy.defense);
+        $(".btn-attack").show();
+    }
+    
+    function selectNewEnemy(){
+        console.log(enemy.id);
+        setEnemy(pick);
     }
 
     //select player and enemy
@@ -81,7 +91,26 @@ $(".pokemon").on("click",function(){
     
     
     //attack button code
+$(".btn-attack").on("click",function(){
+   
+    player.attack = player.attack + baseAtk;
+    player.hp = player.hp - enemy.defense;
+    enemy.hp = enemy.hp - player.attack;
+    $("#p-hp").text("HP: " + player.hp);
+    $("#p-attack").text("Attack: " + player.attack);
+    $("#e-hp").text("HP: " + enemy.hp);
+    if(enemy.hp <= 0){
+        selectNewEnemy();
+    }
+    else if(player.hp <= 0){
+        alert("BLACKED OUT");
+        $(".btn-attack").hide();
+    }
+})
     //when a kill is scored, redisplay pokemon
     //win condition
     //reset button
+    $(".btn-reset").on("click",function(){
+        resetPage();
+    })
 })
