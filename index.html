@@ -29,16 +29,27 @@
         </div>
         <div class="row">
             <div class="col">
-                <img id="pikachu" src="assets/images/pikachu.jpg" class="img-fluid rounded float-left pokemon">
+                <div class="blank">
+                    <img id="pikachu" src="assets/images/pikachu.jpg" class="img-fluid rounded float-left pokemon">
+                </div>
             </div>
             <div class="col">
-                <img id="bulbasaur" src="assets/images/bulbasaur.png" class="img-fluid rounded float-left pokemon">
+                <div class="blank">
+                    <img id="bulbasaur" src="assets/images/bulbasaur.png" class="img-fluid rounded float-left pokemon">
+                </div>
             </div>
             <div class="col">
-                <img id="charmander" src="assets/images/Charmander.png" class="img-fluid rounded float-left pokemon">
+                <div class="enemy-data">
+                    <p id="e-hp"></p>
+                    <p id="e-attack"></p>
+                    <p id="e-defense"></p>
+                    <img id="charmander" src="assets/images/Charmander.png" class="img-fluid rounded float-left pokemon">
+                </div>
             </div>
-            <div class="col enemy">
-                <img id="squirtle" src="assets/images/kisspng-squirtle-pikachu-pokmon-blastoise-charmander-squirtle-5b33824f6f94a6.981826561530102351457.png" class="img-fluid rounded float-left pokemon">
+            <div class="col">
+                <div id="enemy">
+                    <img id="squirtle" src="assets/images/kisspng-squirtle-pikachu-pokmon-blastoise-charmander-squirtle-5b33824f6f94a6.981826561530102351457.png" class="img-fluid rounded float-left pokemon">
+                </div>
             </div>
         </div>
         <div class="row">
@@ -46,9 +57,24 @@
                 <div id="player"></div>
             </div>
             <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div id="action-buttons">
+                            <button type="button" class="btn btn-attack">Attack!</button>
+                            <button type="button" class="btn btn-reset">Reset!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="player-data">
+                            <p id="p-hp"></p>
+                            <p id="p-attack"></p>
+                            <p id="p-defense"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
         </div>
     </div>
     
