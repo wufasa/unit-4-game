@@ -14,6 +14,13 @@ body, html {
   background-size: cover;
 }
 
+.container{
+    text-shadow:-1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
 #text-header{
     text-align: center;
     color: white;
@@ -21,7 +28,7 @@ body, html {
 
 .enemy-data{
     color:antiquewhite;
-    text-align: center;
+    text-align: right;
     font-size: 20pt;
         text-shadow:     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -33,21 +40,53 @@ body, html {
     color: greenyellow;
     text-align: left;
     font-size: 20pt;
-        text-shadow:     -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
 }
 
-#player{
-    width: 80%;
+#player-sprite{
+    float:right; 
+    width:90%;
+    overflow:hidden;
 }
 
+#enemy-sprite{
+    float:left;
+    width:100%;
+}
 #action-buttons{
     color: red;
-    padding: 20%;
+    padding-top: 35%;
+}
+.row{
+    height: 50%
 }
 
 .btn-reset{
     float:right;
+}
+
+.forced-height{
+    height: 100px !important;
+}
+
+.pokemon{
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.attack{
+    color: aliceblue;
+}
+
+.hp{
+    color: aliceblue;
+}
+
+.defense{
+    color:aliceblue;
+}
+#p-hp-bar{
+    background:green;
+}
+#e-hp-bar{
+    background:red;
 }

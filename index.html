@@ -27,32 +27,57 @@
                 <h1 id="text-header">Choose your pokemon</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="blank">
-                    <img id="pikachu" src="assets/images/pikachu.jpg" class="img-fluid rounded float-left pokemon">
+        <div class="row forced-height">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col">
+                        <div class="enemy-data">
+                            <p class="data" id="e-hp"></p>
+                            <p class="data" id="e-attack"></p>
+                            <p class="data" id="e-defense"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="pikachu">
+                            <img id="pikachu" src="assets/images/pikachu.jpg" class="img-fluid rounded float-left pokemon">
+                            <p class="hp">HP:</p>
+                            <p class="attack">Attack: </p>
+                            <p class="defense">Defense: </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bulbasaur">
+                            <img id="bulbasaur" src="assets/images/bulbasaur.png" class="img-fluid rounded float-left pokemon">
+                            <p class="hp">HP:</p>
+                            <p class="attack">Attack: </p>
+                            <p class="defense">Defense: </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="squirtle">
+                            <img id="squirtle" src="assets/images/kisspng-squirtle-pikachu-pokmon-blastoise-charmander-squirtle-5b33824f6f94a6.981826561530102351457.png" class="img-fluid rounded float-left pokemon">                         <p class="hp">HP: </p>
+                            <p class="attack">Attack: </p>
+                            <p class="defense">Defense: </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="charmander">
+                            <img id="charmander" src="assets/images/Charmander.png" class="img-fluid rounded float-left pokemon">                           
+                            <p class="hp">HP:</p>
+                            <p class="attack">Attack: </p>
+                            <p class="defense">Defense: </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="blank">
-                    <img id="bulbasaur" src="assets/images/bulbasaur.png" class="img-fluid rounded float-left pokemon">
-                </div>
-            </div>
-            <div class="col">
-                <div class="enemy-data">
-                    <p id="e-hp"></p>
-                    <p id="e-attack"></p>
-                    <p id="e-defense"></p>
-                    <img id="charmander" src="assets/images/Charmander.png" class="img-fluid rounded float-left pokemon">
-                </div>
-            </div>
-            <div class="col">
+            <div class="col-3">
                 <div id="enemy">
-                    <img id="squirtle" src="assets/images/kisspng-squirtle-pikachu-pokmon-blastoise-charmander-squirtle-5b33824f6f94a6.981826561530102351457.png" class="img-fluid rounded float-left pokemon">
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <div class="col">
                 <div id="player"></div>
             </div>
@@ -68,7 +93,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="player-data">
-                            <p id="p-hp"></p>
+                            <p id="p-hp"></p> 
                             <p id="p-attack"></p>
                             <p id="p-defense"></p>
                         </div>
