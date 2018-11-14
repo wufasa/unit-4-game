@@ -149,8 +149,8 @@ $(".btn-reset").on("click",function(){
     })
 
     //HP bar
-function hpBar(){
-    var percent = player.hp / pokemon[player.id] * 100;
+function hpBar(person){
+    var percent = person.hp / pokemon[person.id] * 100;
     
 }
     
