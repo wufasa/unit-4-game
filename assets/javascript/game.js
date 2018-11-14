@@ -10,24 +10,24 @@
 $(document).ready(function() {
 var pokemon = {
     charmander:{
-        hp: 350,
-        attack: 30,
-        defense: 20,
+        hp: 150,
+        attack: 10,
+        defense: 24,
         sprite: "assets/images/charmander-gif.gif",
         enemysprite: "assets/images/charmander-attack.gif",
     },
     bulbasaur:{
-        hp: 150,
-        attack: 30,
-        defense: 10,
+        hp: 300,
+        attack: 5,
+        defense: 14,
         id:"bulbasaur",
         sprite: "assets/images/bulbasaur-back.gif",
         enemysprite: "assets/images/bulbasaur-front.gif",
     },
     squirtle:{
         hp: 240,
-        attack: 30,
-        defense: 15,
+        attack: 8,
+        defense: 12,
         id:"squirtle",
         sprite: "assets/images/squirtle-back.gif",
         enemysprite: "assets/images/squirtle-front.gif",
@@ -35,7 +35,7 @@ var pokemon = {
     pikachu:{
         hp:70,
         attack:50,
-        defense:50,
+        defense:48,
         id:"pikachu",
         sprite: "assets/images/pikachu-back.gif",
         enemysprite: "assets/images/detectivepikachu.jpg"
@@ -79,8 +79,8 @@ function resetPage(){
         $("." + pick.id).empty();
         $("#p-hp").text("HP: " + player.hp);
         $("#p-attack").text("Attack: " + player.attack);
-        $(".player-data").prepend('<span id="p-hp-bar" class="d-block">&nbsp; </span>')
-        $(".enemy-data").prepend('<span id="e-hp-bar" class="d-block">&nbsp; </span>')
+//        $(".player-data").prepend('<span id="p-hp-bar" class="d-block">&nbsp; </span>')
+//        $(".enemy-data").prepend('<span id="e-hp-bar" class="d-block">&nbsp; </span>')
     }  
     
     function displayEnemy(){
@@ -124,7 +124,7 @@ $(".btn-attack").on("click",function(){
     player.attack = player.attack + baseAtk;
     player.hp = player.hp - enemy.defense;
     enemy.hp = enemy.hp - player.attack;
-    hpBar();
+    hpBar(this);
     $("#p-hp").text("HP: " + player.hp);
     $("#p-attack").text("Attack: " + player.attack);
     $("#e-hp").text("HP: " + enemy.hp);
